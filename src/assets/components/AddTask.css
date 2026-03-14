@@ -1,1 +1,43 @@
+.add-task {
+  margin-top: 5%;
+}
 
+.add-task form {
+  display: flex;
+  justify-content: center;
+}
+
+.add-task input {
+  border: 0;
+  padding: 0.75rem 1rem;
+  outline-color: #ccc;
+  border-radius: 0.25rem;
+  width: 20rem;
+}
+
+.add-task .btn-add {
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  font-size: 1.5rem;
+  background: #0280ff;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  transition: background 250ms ease-in-out;
+}
+
+.add-task .btn-add:hover {
+  background: #006dda;
+}
+
+.bi {
+  font-size: 2rem;
+}
+
+.task-error {
+  margin-top: 0.25rem;
+  color: rgb(255, 26, 37);
+}

@@ -1,0 +1,90 @@
+.show-task {
+}
+
+.show-task .task-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 0;
+  padding: 0 1rem;
+}
+
+.task-header div {
+  display: flex;
+  align-items: center;
+}
+
+.counter {
+  margin-left: 0.5rem;
+  padding: 0.5rem;
+  background: #ccc;
+  border-radius: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.show-task .task-main {
+  background: #f8f9fa;
+  border-radius: 0.5rem;
+  min-height: 50vh;
+  padding: 1rem;
+}
+
+.btn-clear {
+  border-radius: 0.5rem;
+  background: #0280ff;
+  color: #fff;
+  padding: 0.75rem 1rem;
+  font-weight: bold;
+}
+
+.task-main ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.task-main ul li {
+  background: #fff;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  box-shadow: 0px 2px 15px 0px rgba(0, 0, 0, 0.25);
+}
+
+.task-title {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.task-date {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.delete-task,
+.edit-task {
+  font-size: 1.5rem;
+  display: inline-block;
+}
+
+.delete-task:hover,
+.edit-task:hover {
+  cursor: pointer;
+}
+
+.delete-task {
+  color: #0280ff;
+  margin-left: 1rem;
+}
+
+.edit-task {
+  color: crimson;
+}
+
+.message {
+  color: #999;
+}
