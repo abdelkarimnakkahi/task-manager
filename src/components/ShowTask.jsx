@@ -1,9 +1,31 @@
-import { useState } from "react";
 import "./ShowTask.css";
 import { PencilSquare, TrashFill } from "react-bootstrap-icons";
-function ShowTask({ tasks, setTasks }) {
+function ShowTask({ tasks, setTasks, currentTask, setCurrentTask }) {
   const handleClear = () => {
     setTasks([]);
+  };
+
+  const handleDelete = (id) => {
+    // console.log("-------");
+    // console.log(id);
+
+    setTasks(
+      tasks.filter((task) => {
+        return task.id !== id;
+      }),
+    );
+    // Another way
+    //     const handleDelete = (id) => {
+    //   setTasks((prevTasks) => prevTasks.filter((task) => task.id !== id));
+    // };
+  };
+
+  const handleEdit = (id) => {
+    const taskEdit = tasks.find((task) => {
+      return task.id === id;
+    });
+
+    setCurrentTask(taskEdit);
   };
 
   return (
@@ -33,8 +55,18 @@ function ShowTask({ tasks, setTasks }) {
                     <p className="task-date">{task.createdAt}</p>
                   </div>
                   <div>
-                    <PencilSquare className="delete-task" />
-                    <TrashFill className="edit-task" />
+                    <PencilSquare
+                      className="edit-task"
+                      onClick={() => {
+                        handleEdit(task.id);
+                      }}
+                    />
+                    <TrashFill
+                      className="delete-task"
+                      onClick={() => {
+                        handleDelete(task.id);
+                      }}
+                    />
                   </div>
                 </li>
               );

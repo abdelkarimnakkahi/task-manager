@@ -67,8 +67,8 @@
 
 .delete-task,
 .edit-task {
-  font-size: 1.5rem;
   display: inline-block;
+  font-size: 1.15rem;
 }
 
 .delete-task:hover,
@@ -77,12 +77,12 @@
 }
 
 .delete-task {
-  color: #0280ff;
-  margin-left: 1rem;
+  color: red;
+  margin-left: 0.5rem;
 }
 
 .edit-task {
-  color: crimson;
+  color: #0280ff;
 }
 
 .message {
