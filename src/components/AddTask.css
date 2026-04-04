@@ -16,10 +16,8 @@
 }
 
 .add-task .btn-add {
-  border-radius: 50%;
-  width: 3rem;
-  height: 3rem;
-  font-size: 1.5rem;
+  border-radius: 0.5rem;
+  font-size: 1rem;
   background: #0280ff;
   color: #fff;
   display: flex;

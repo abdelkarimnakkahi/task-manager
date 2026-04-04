@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./AddTask.css";
 
 function AddTask({ tasks, setTasks, currentTask, setCurrentTask }) {
@@ -63,7 +63,7 @@ function AddTask({ tasks, setTasks, currentTask, setCurrentTask }) {
             {taskError && <p className="task-error">{taskError}</p>}
           </div>
           <button type="submit" className="btn-add">
-            +
+            {currentTask.id ? "Update" : "Add"}
           </button>
         </form>
       </div>
